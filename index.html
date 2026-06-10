@@ -1,22 +1,120 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Privacy Policy – Discogs Theme Designer</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Discogs Digger</title>
+<meta name="description" content="Privacy policy for the Discogs Digger Chrome extension — how it handles your data.">
+<style>
+  :root{ --ink:#1a1c22; --muted:#5b6170; --line:#e9e9ef; --bg:#ffffff; --accent:#6b3df0; }
+  *{ box-sizing:border-box; }
+  body{ margin:0; background:#f6f6fb; color:var(--ink);
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,Roboto,Helvetica,Arial,sans-serif; }
+  header.hero{ background:linear-gradient(135deg,#2a2540,#15101f); color:#fff; padding:38px 22px; }
+  header.hero .inner{ max-width:760px; margin:0 auto; display:flex; align-items:center; gap:16px; }
+  .badge{ width:54px; height:54px; border-radius:14px; flex:0 0 auto; position:relative;
+    background:radial-gradient(circle at 50% 50%, #8a5cff 0 17%, #120f1c 18% 46%, #241d3a 47% 100%);
+    box-shadow:0 0 0 1px rgba(255,255,255,.12); }
+  .badge::after{ content:""; position:absolute; inset:44%; border-radius:50%; background:#15101f; }
+  header.hero h1{ margin:0; font-size:22px; font-weight:800; letter-spacing:.2px; }
+  header.hero p{ margin:3px 0 0; color:#c9c2e6; font-size:13.5px; }
+  .wrap{ max-width:760px; margin:0 auto; padding:0 22px 64px; }
+  main{ background:var(--bg); margin-top:-18px; border-radius:16px;
+    box-shadow:0 8px 30px rgba(20,16,31,.08); padding:30px 30px 34px; }
+  h2{ font-size:16.5px; margin:26px 0 8px; padding-top:18px; border-top:1px solid var(--line); }
+  h2:first-of-type{ border-top:0; padding-top:0; margin-top:10px; }
+  p,li{ color:#2a2d36; }
+  .muted{ color:var(--muted); font-size:13.5px; }
+  a{ color:var(--accent); }
+  ul{ padding-left:20px; } li{ margin:5px 0; }
+  code{ background:#f1f0f8; padding:1px 6px; border-radius:6px; font-size:13.5px;
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+  .tag{ display:inline-block; font-size:12px; font-weight:700; color:var(--accent);
+    background:#efeaff; border:1px solid #ddd2ff; padding:2px 9px; border-radius:999px; }
+  footer{ margin-top:28px; color:var(--muted); font-size:12.5px; }
+</style>
 </head>
 <body>
-  <h1>Privacy Policy</h1>
+<header class="hero">
+  <div class="inner">
+    <div class="badge" aria-hidden="true"></div>
+    <div>
+      <h1>Discogs Digger — Privacy Policy</h1>
+      <p>How the Discogs Digger browser extension handles your data.</p>
+    </div>
+  </div>
+</header>
 
-  <p>Discogs Theme Designer does not collect, store, transmit, or share any personal data.</p>
+<div class="wrap">
+<main>
+  <p class="muted"><span class="tag">Last updated</span>&nbsp;&nbsp;10 June 2026</p>
 
-  <p>The extension operates entirely locally in the user's browser.</p>
+  <p>Discogs Digger (“the extension”) is a browser extension that adds a dark theme and optional collector
+  tools to the <strong>discogs.com</strong> website. We are committed to protecting your privacy and we keep
+  data handling to the absolute minimum required for the extension to work.</p>
 
-  <p>The only data stored is user-selected theme preferences, which are saved locally using Chrome storage to ensure settings persist across page reloads.</p>
+  <h2>Summary</h2>
+  <p>The extension does <strong>not</strong> collect, log, sell, or transmit your personal information or your
+  browsing activity to us. We run no servers of our own for the extension’s features, and your settings stay
+  in your browser.</p>
 
-  <p>No analytics, tracking, advertising, or external network requests are used.</p>
+  <h2>Information we store</h2>
+  <ul>
+    <li><strong>Your preferences only</strong> — your selected theme, which tools are enabled and their
+    options, and your chosen language. These are saved in your browser using Chrome’s <code>storage</code>
+    API (and synced through your own Google account if you have Chrome Sync enabled). They are never sent
+    to us.</li>
+  </ul>
 
-  <p>This extension modifies only the visual appearance of the Discogs website.</p>
+  <h2>Information we do <em>not</em> collect</h2>
+  <ul>
+    <li>We do not collect or log your browsing history or the pages you visit.</li>
+    <li>We do not use analytics, tracking, fingerprinting, or advertising.</li>
+    <li>We do not sell or share any data, and we never use data to assess creditworthiness.</li>
+  </ul>
 
-  <p>If you have any questions, you can contact the developer via the Chrome Web Store listing.</p>
+  <h2>Network requests the extension makes</h2>
+  <p>To power certain features, the extension contacts the services below. None of these requests include
+  your personal information, login, or any identifying data, and <strong>no Discogs account, API key, or
+  personal token is ever used</strong>:</p>
+  <ul>
+    <li><strong>Discogs public API</strong> (<code>api.discogs.com</code>) — reads public release and listing
+    data (for example, the YouTube videos linked to a release, a listing’s posted date, and whether a listing
+    accepts offers). These are public, unauthenticated requests.</li>
+    <li><strong>Frankfurter</strong> (<code>api.frankfurter.app</code>) — fetches public currency exchange
+    rates for the in-page currency converter.</li>
+    <li><strong>ExtensionPay</strong> (<code>extensionpay.com</code>) — used only for the optional “Pro”
+    upgrade described below.</li>
+  </ul>
+
+  <h2>Payments (optional “Pro” upgrade)</h2>
+  <p>The extension’s advanced features can be unlocked with an optional paid upgrade. Payments are handled
+  entirely by <a href="https://extensionpay.com" rel="noopener">ExtensionPay</a>, which processes the
+  transaction through <a href="https://stripe.com" rel="noopener">Stripe</a>. ExtensionPay and Stripe collect
+  the e‑mail address and payment details needed to complete your purchase, under their own privacy policies.
+  The extension itself only reads back whether your account is “paid” — we never receive or store your full
+  payment details.</p>
+
+  <h2>Data retention &amp; control</h2>
+  <p>Your preferences remain in your browser until you remove the extension or clear its storage. Uninstalling
+  the extension deletes its locally stored settings.</p>
+
+  <h2>Children</h2>
+  <p>The extension is intended for a general audience and is not directed at children under 13.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>We may update this policy as the extension evolves. Material changes will be reflected on this page with a
+  new “Last updated” date above.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about this policy or your data? Contact the developer at
+  <a href="mailto:jacopodecks@gmail.com">jacopodecks@gmail.com</a>.</p>
+
+  <footer>
+    Discogs Digger is an independent project and is <strong>not affiliated with, sponsored by, or endorsed by
+    Discogs</strong>. All product names and trademarks are the property of their respective owners.
+  </footer>
+</main>
+</div>
 </body>
 </html>
